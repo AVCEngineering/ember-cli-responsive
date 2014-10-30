@@ -1,3 +1,21 @@
 <h2 id='title'>Welcome to Ember.js</h2>
 
 {{outlet}}
+
+{{log media}}
+
+{{#if media.isMobile}}
+  MOBILE!
+{{/if}}
+
+{{#if media.isTablet}}
+  TABLET!
+{{/if}}
+
+{{#if media.isDesktop}}
+  DESKTOP!
+{{/if}}
+
+{{#if media.isJumbo}}
+  JUMBO!
+{{/if}}

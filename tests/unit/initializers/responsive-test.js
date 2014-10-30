@@ -1,5 +1,5 @@
-import Ember from 'ember';
-import { initialize } from 'ember-cli-responsive/initializers/responsive';
+/*import Ember from 'ember';
+import { initialize } from 'dummy/app/initializers/responsive';
 
 var container, application;
 
@@ -19,5 +19,5 @@ test('it works', function() {
 
   // you would normally confirm the results of the initializer here
   ok(true);
-});
+});*/
 
