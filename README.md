@@ -1,6 +1,63 @@
 # Ember-cli-responsive
 
-This README outlines the details of collaborating on this Ember addon.
+This README outlines the details of collaborating on this Ember addon. All contributions welcome!
+
+## Usage
+
+* `npm install --save-dev ember-cli-responsive`
+
+Import ember-cli-responsive module into your app.js and add responsive breaks point as below.
+
+```js
+import Ember from 'ember';
+import Resolver from 'ember/resolver';
+import loadInitializers from 'ember/load-initializers';
+import config from './config/environment';
+import 'ember-cli-responsive/responsive';
+
+Ember.MODEL_FACTORY_INJECTIONS = true;
+
+var App = Ember.Application.extend({
+  modulePrefix: config.modulePrefix,
+  podModulePrefix: config.podModulePrefix,
+  Resolver: Resolver
+});
+
+App.responsive({
+  media: {
+    mobile:  '(max-width: 768px)',
+    tablet:  '(min-width: 769px) and (max-width: 992px)',
+    desktop: '(min-width: 993px) and (max-width: 1200px)',
+    jumbo:   '(min-width: 1201px)'
+  }
+});
+
+loadInitializers(App, config.modulePrefix);
+
+export default App;
+```
+
+You can then query those breakpoints in your controllers, components, routes, and views:
+
+```js
+  this.get('media.isMobile'); // => true
+```
+
+The same is true in templates:
+
+```
+  {{#if media.isDesktop}}
+    Desktop view!
+  {{/if}}
+```
+
+The addon comes bundled with [matchMedia.js](https://github.com/paulirish/matchMedia.js/blob/master/matchMedia.js "matchMedia"). Optionally include this with an IE conditional or within a feature detect.
+
+```html
+<!--[ if lte IE 9]>
+  <script src="/assets/matchMedia/matchMedia.js">
+<![ endif ]-->
+```
 
 ## Installation
 

@@ -32,7 +32,11 @@
     "broccoli-merge-trees": "^0.2.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-responsive",
+    "ember",
+    "responsive",
+    "matchMedia"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
