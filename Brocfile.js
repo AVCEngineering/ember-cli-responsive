@@ -19,7 +19,7 @@ var app = new EmberAddon();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-var matchMediaPolyfil = pickFiles(app.bowerDirectory + 'bower_components/matchMedia',{
+var matchMediaPolyfil = pickFiles('bower_components/matchMedia',{
     srcDir: '/',
     files: ['matchMedia.js'],
     destDir: '/assets/matchMedia'
