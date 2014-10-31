@@ -1,6 +1,8 @@
 /* global require, module */
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+var pickFiles = require('broccoli-static-compiler');
+var mergeTrees = require('broccoli-merge-trees');
 
 var app = new EmberAddon();
 
@@ -17,4 +19,10 @@ var app = new EmberAddon();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+var matchMediaPolyfil = pickFiles('bower_components/matchMedia',{
+    srcDir: '/',
+    files: ['matchMedia.js'],
+    destDir: '/assets/matchMedia'
+});
+
+module.exports = mergeTrees([app.toTree(), matchMediaPolyfil]);
