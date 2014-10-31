@@ -1,6 +1,9 @@
 {
   "name": "ember-cli-responsive",
   "version": "0.0.0",
+  "author": {
+    "name": "Andrew Van Campenhout"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
