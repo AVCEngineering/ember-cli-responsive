@@ -1,9 +1,7 @@
 {
   "name": "ember-cli-responsive",
-  "version": "0.0.0",
-  "author": {
-    "name": "Andrew Van Campenhout"
-  },
+  "version": "0.0.1",
+  "author": "",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -17,7 +15,6 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.2.0",
