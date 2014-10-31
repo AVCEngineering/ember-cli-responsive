@@ -1,5 +1,7 @@
 # Ember-cli-responsive
 
+[![Build Status](https://travis-ci.org/AVCEngineering/ember-cli-responsive.svg?branch=master)](https://travis-ci.org/AVCEngineering/ember-cli-responsive)
+
 This README outlines the details of collaborating on this Ember addon. All contributions welcome!
 
 ## Usage
