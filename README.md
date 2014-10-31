@@ -10,7 +10,11 @@ This README outlines the details of collaborating on this Ember addon. All contr
 
 * `npm install --save-dev ember-cli-responsive`
 
-Import ember-cli-responsive module into your app.js and add responsive breaks point as below.
+For browers that don't support matchmedia run the match-media blueprint to install [matchMedia.js](https://github.com/paulirish/matchMedia.js/blob/master/matchMedia.js "matchMedia") via bower. (optional):
+
+* `ember g match-media' 
+
+Import ember-cli-responsive module into your app.js and add responsive break points as below.
 
 ```js
 import Ember from 'ember';
@@ -55,7 +59,7 @@ The same is true in templates:
   {{/if}}
 ```
 
-The addon comes bundled with [matchMedia.js](https://github.com/paulirish/matchMedia.js/blob/master/matchMedia.js "matchMedia"). Optionally include this with an IE conditional or within a feature detect.
+Optionally include matchMedia with an IE conditional or within a feature detect.
 
 ```html
 <!--[ if lte IE 9]>
