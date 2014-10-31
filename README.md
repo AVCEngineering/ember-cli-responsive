@@ -12,7 +12,7 @@ This README outlines the details of collaborating on this Ember addon. All contr
 
 For browers that don't support matchmedia run the match-media blueprint to install [matchMedia.js](https://github.com/paulirish/matchMedia.js/blob/master/matchMedia.js "matchMedia") via bower. (optional):
 
-* `ember g match-media' 
+* `ember g match-media`
 
 Import ember-cli-responsive module into your app.js and add responsive break points as below.
 
