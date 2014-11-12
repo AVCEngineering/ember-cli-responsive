@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Object.extend({
 
   matches: function() {
-    return new Set();
+    return Ember.A();
   }.property(),
 
   listeners: {},
@@ -15,7 +15,7 @@ export default Ember.Object.extend({
     return this.get('matches').map(function(name) {
       return 'media-' + dasherize(name);
     }).join(' ');
-  }.property('matches.[]'),
+  }.property('matches.length'),
 
   match: function(name, query) {
     var classify = Ember.String.classify,
@@ -28,9 +28,9 @@ export default Ember.Object.extend({
       _this.set(isser, matcher.matches);
 
       if (matcher.matches) {
-        _this.get('matches').add(name);
+        _this.get('matches').pushObject(name);
       } else {
-        _this.get('matches').delete(name);
+        _this.get('matches').removeObject(name);
       }
     }
     this.get('listeners')[name] = listener;
