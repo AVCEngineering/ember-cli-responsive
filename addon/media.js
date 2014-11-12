@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Object.extend({
 
   matches: function() {
-    return new Ember.Set();
+    return new Set();
   }.property(),
 
   listeners: {},
@@ -30,7 +30,7 @@ export default Ember.Object.extend({
       if (matcher.matches) {
         _this.get('matches').add(name);
       } else {
-        _this.get('matches').remove(name);
+        _this.get('matches').delete(name);
       }
     }
     this.get('listeners')[name] = listener;
