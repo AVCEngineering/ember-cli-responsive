@@ -9,6 +9,7 @@ This README outlines the details of collaborating on this Ember addon. All contr
 ## Usage
 
 * `npm install --save-dev ember-cli-responsive`
+* `ember g ember-cli-responsive`
 
 Import ember-cli-responsive module into your app.js and add responsive break points as below.
 
