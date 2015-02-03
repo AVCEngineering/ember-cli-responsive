@@ -56,6 +56,15 @@ The same is true in templates:
   {{/if}}
 ```
 
+## Polyfill with matchMedia
+
+After running the above generator you can simply import via your project's Brocfile
+
+```js
+//Brocfile.js
+app.import('bower_components/matchMedia/matchMedia.js');
+```
+
 ## Installation
 
 * `git clone` this repository
