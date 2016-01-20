@@ -2,20 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Object.extend({
 
-  matches: function() {
+  matches: Ember.computed(function() {
     return Ember.A();
-  }.property(),
+  }),
 
   listeners: {},
 
   mql: window.matchMedia,
 
-  classNames: function() {
+  classNames: Ember.computed('matches.length', function() {
     var dasherize = Ember.String.dasherize;
     return this.get('matches').map(function(name) {
       return 'media-' + dasherize(name);
     }).join(' ');
-  }.property('matches.length'),
+  }),
 
   match: function(name, query) {
     var classify = Ember.String.classify,
