@@ -1,24 +1,28 @@
 import Ember from 'ember';
 import 'ember-cli-responsive/responsive';
 import { initialize } from 'dummy/initializers/responsive';
+import { module, test } from 'qunit';
 
-var container, application;
+var registry, application;
 
-module('ResponsiveInitializer', {
-  setup: function() {
+module('Unit | Initializer | responsive', {
+  beforeEach: function() {
     Ember.run(function() {
-      container = new Ember.Container();
       application = Ember.Application.create();
+      registry = application.registry;
       application.deferReadiness();
     });
   }
 });
 
-// Replace this with your real tests.
-test('it works', function() {
-  initialize(container, application);
+test('it works with Ember 1.x syntax', function(assert) {
+  initialize(registry, application);
 
-  // you would normally confirm the results of the initializer here
-  ok(true);
+  assert.ok(true);
 });
 
+test('it works with Ember 2.x syntax', function(assert) {
+  initialize(application);
+
+  assert.ok(true);
+});

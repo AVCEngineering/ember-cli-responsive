@@ -1,4 +1,5 @@
-export var initialize = function(container, app) {
+export var initialize = function() {
+  var app = arguments[1] || arguments[0];
   // application.inject('route', 'foo', 'service:foo');
   var responsive = app.constructor.responsive;
 

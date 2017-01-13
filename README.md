@@ -8,8 +8,7 @@ This README outlines the details of collaborating on this Ember addon. All contr
 
 ## Usage
 
-* `npm install --save-dev ember-cli-responsive`
-* `ember g ember-cli-responsive`
+* `ember install ember-cli-responsive`
 
 Import ember-cli-responsive module into your app.js and add responsive break points as below.
 
@@ -20,12 +19,14 @@ import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
 import 'ember-cli-responsive/responsive';
 
+let App;
+
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
-var App = Ember.Application.extend({
+App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver: Resolver
+  Resolver
 });
 
 App.responsive({
@@ -58,10 +59,10 @@ The same is true in templates:
 
 ## Polyfill with matchMedia
 
-After running the above generator you can simply import via your project's Brocfile
+After running the above generator you can simply import via your project's ember-cli-build.js
 
 ```js
-//Brocfile.js
+//ember-cli-build.js
 app.import('bower_components/matchMedia/matchMedia.js');
 ```
 
@@ -78,8 +79,7 @@ app.import('bower_components/matchMedia/matchMedia.js');
 
 ## Running Tests
 
-* `ember test`
-* `ember test --server`
+* `npm test`
 
 ## Building
 
